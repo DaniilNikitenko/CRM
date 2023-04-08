@@ -3,5 +3,7 @@ let nameProduct = 'Настольная игра “На 4-х ногах',
 	categoryProduct = 'Настольные игры',
 	priceProduct = 1200;
 
+
+console.log(nameProduct)
 console.log(priceProduct * countProduct)
 
