@@ -5,12 +5,76 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>CRM</title>
+	<link rel="preload" href="fonts/Inter-Regular.woff2" as="font" crossorigin>
+	<link rel="preload" href="fonts/Inter-SemiBold.woff2" as="font" crossorigin>
+	<link rel="preload" href="fonts/Inter-Medium.woff2" as="font" crossorigin>
+	<link rel="preload" href="fonts/Inter-Bold.woff2" as="font" crossorigin>
+	<link rel="stylesheet" href="css/style.css">
 	<script defer src="js/script.js"></script>
+	<title>CRM</title>
 </head>
 
 <body class="page">
+	<div class="popup">
+		<div class="popup__body">
+			<div class="popup__content">
+				<button class="popup__close" type="button">
+				</button>
+				<h2 class="popup__title">Добавить товар</h2>
+				<form class="form" action="https://jsonplaceholder.typicode.com/posts" method="post">
+					<fieldset class="form__fielset">
+						<div class="form__row">
+							<div class="form__block">
+								<label class="form__label" for="name">Наименование</label>
+								<input class="form__input" type="text" name="name" id="name" required tabindex="1">
+							</div>
+							<div class="form__block form__block_size_big">
+								<label class="form__label" for="desc">Описание</label>
+								<textarea class="form__input" name="description" id="desc" required rows="5"
+									tabindex="5"></textarea>
+							</div>
+							<div class="form__block">
+								<label class="form__label" for="caterogy">Категория</label>
+								<input class="form__input" type="text" name="carerogy" id="caterogy" required
+									tabindex="2">
+							</div>
+							<div class="form__block">
+								<label class="form__label" for="unit">Единицы измерения</label>
+								<input class="form__input" type="text" name="unit" id="unit" required tabindex="3">
+							</div>
+							<div class="form__block">
+								<label class="form__label" for="quantity">Количество</label>
+								<input class="form__input" type="number" name="quantity" id="quantity" required
+									tabindex="6">
+							</div>
 
+							<div class="form__block">
+								<label class="form__label" for="discont">Дисконт</label>
+								<div class="form__discont">
+									<input class="form__checkbox" type="checkbox" tabindex="4">
+									<input class="form__input" type="text" name="discont" id="discont" required
+										disabled>
+								</div>
+							</div>
+
+
+							<div class="form__block">
+								<label class="form__label" for="price">Цена</label>
+								<input class="form__input" type="text" name="price" id="price" required tabindex="7">
+							</div>
+							<label class="form__text-button" for="image" tabindex="8">Добавить изображение</label>
+							<input class="form__input" type="file" name="image" id="image" required accept="image/*">
+						</div>
+
+					</fieldset>
+					<div class="form__block-bottom">
+						<p class="form__text">Итоговая стоимость: <span class="text-span">$ 900.00</span></p>
+						<button class="form__button" type="submit">Добавить товар</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
 </body>
 
 </html>
