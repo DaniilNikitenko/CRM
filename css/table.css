@@ -1,0 +1,293 @@
+.cms {
+	padding-top: 40px;
+	display: none;
+}
+
+.sms__top {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 10px;
+	margin-bottom: 28px;
+	position: relative;
+}
+
+.sms__top::before {
+	content: '';
+	position: absolute;
+	bottom: -7px;
+	left: 0;
+	width: 100%;
+	height: 1px;
+	background-color: #C6C2DE;
+}
+
+.sms__content {
+	background: #FFFFFF;
+	box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+	border-radius: 8px;
+	padding: 15px 0 0 0;
+}
+
+.sms__form-top {
+	display: grid;
+	grid-template-columns: 108px 1fr 181px;
+	gap: 20px;
+	padding: 0px 20px 15px 20px;
+}
+
+.sms__filter {
+	display: flex;
+	gap: 10px;
+	align-items: center;
+	padding: 10px;
+	background: #FFFFFF;
+	border: 1px solid #C6C2DE;
+	border-radius: 6px;
+	color: #8B83BA;
+	transition: background-color 0.3s, color 0.3s;
+}
+
+.sms__filter:hover {
+	background-color: #8B83BA;
+	color: #fff;
+}
+
+
+.sms__filter:hover .sms__filter-text {
+	color: #fff;
+}
+
+.sms__filter:active {
+	background-color: #473996;
+	color: #fff;
+}
+
+
+.sms__filter-text {
+	font-size: 16px;
+	line-height: 1.18;
+	color: #25213B;
+	font-weight: 400;
+}
+
+.sms__input-block {
+	background: #F4F2FF;
+	border-radius: 6px;
+	max-width: 392px;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	padding-left: 10px;
+}
+
+.sms__button-form {
+	background: transparent;
+	border: none;
+}
+
+.cms__input {
+	font-size: 12px;
+	line-height: 125%;
+	color: var(--text-color);
+	background-color: transparent;
+	border: none;
+	width: 100%;
+	padding: 13px 10px;
+	outline: none;
+}
+
+.sms__input-block:hover {
+	outline: 1px solid #25213B;
+}
+
+.cms__input::placeholder {
+	font-size: 12px;
+	color: #6E6893;
+}
+
+.sms__button {
+	width: 181px;
+	height: 39px;
+	background-color: var(--primary-color);
+	border-radius: 6px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-transform: uppercase;
+	font-size: 16px;
+	line-height: 1.19;
+	color: #FFFFFF;
+	border: none;
+	padding: 3px;
+	transition: background-color 0.5s, color 0.5s;
+}
+
+.sms__button:hover {
+	background-color: #473996;
+}
+
+.sms__button:active {
+	background-color: #fff;
+	outline: 1px solid #25213B;
+	color: #473996;
+}
+
+.table {
+	border-collapse: collapse;
+	min-width: 1100px;
+	width: 100%;
+}
+
+.scroll-block {
+	overflow-x: auto;
+}
+
+.table__thead {
+	background: #F4F2FF;
+	border-top: 1px solid #D9D5EC;
+	border-bottom: 1px solid #D9D5EC;
+}
+
+
+.table__cell-thead {
+	padding: 15px 7px 15px 8px;
+	text-align: left;
+}
+
+.table__cell-tbody {
+	padding: 20px 7px 19px 8px;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 1.21;
+	color: #25213B;
+	text-transform: none;
+}
+
+.table__cell-id {
+	width: 80px;
+}
+
+.table__cell-name {
+	width: 300px;
+}
+
+.table__cell-category {
+	width: 150px;
+}
+
+.table__cell-units {
+	text-align: center;
+	width: 70px;
+}
+
+.table__cell-count {
+	text-align: center;
+	width: 100px;
+}
+
+.table__cell-price {
+	text-align: right;
+	width: 100px;
+}
+
+.table__cell-total {
+	text-align: right;
+	width: 124px;
+	padding-right: 40px;
+}
+
+.table__cell-bth {
+	display: flex;
+	gap: 20px;
+}
+
+.bth-icon {
+	background-color: transparent;
+	border: none;
+	transition: transform 0.3s;
+}
+
+.bth-icon:hover {
+	transform: scale(1.3);
+}
+
+.table__tfoot {
+	background-color: #F4F2FF;
+}
+
+.table__cell-tfoot {
+	text-align: right;
+}
+
+.text-tfoot {
+	text-transform: none;
+}
+
+.select-label {
+	text-transform: none;
+}
+
+
+.select {
+	width: 20px;
+	background-color: transparent;
+	border: none;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	appearance: none;
+	background-color: #fff;
+	background-image: url('../img/icon.svg');
+	background-repeat: no-repeat;
+	background-position: right;
+	color: var(--text-color);
+	cursor: pointer;
+}
+
+
+.table__cell-tfoot {
+	padding: 15px 0;
+}
+
+.table__cell-tfoot-control {
+	padding-left: 15px;
+	display: flex;
+	gap: 50px;
+	justify-content: center;
+}
+
+.tfoot-icon {
+	border: none;
+	background-color: transparent;
+}
+
+
+
+@media screen and (max-width: 730px) {
+	.sms__form-top {
+		grid-template-columns: repeat(2, minmax(100px, 200px));
+		grid-template-rows: repeat(2, 40px);
+	}
+
+	.sms__input-block {
+		grid-row: 2/3;
+		grid-column: 1/3;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.sms__content {
+		padding-top: 10px;
+	}
+
+	.sms__form-top {
+		gap: 10px;
+		padding: 10px 15px;
+	}
+
+	.sms__button {
+		width: 110px;
+		font-size: 12px;
+	}
+
+}
