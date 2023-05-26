@@ -21,6 +21,10 @@
 	background-color: #C6C2DE;
 }
 
+.form__text-total {}
+
+.total-sum {}
+
 .sms__content {
 	background: #FFFFFF;
 	box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
@@ -28,7 +32,7 @@
 	padding: 15px 0 0 0;
 }
 
-.sms__form-top {
+.sms__header {
 	display: grid;
 	grid-template-columns: 108px 1fr 181px;
 	gap: 20px;
@@ -193,12 +197,14 @@
 .table__cell-total {
 	text-align: right;
 	width: 124px;
-	padding-right: 40px;
+	padding-right: 20px;
 }
 
 .table__cell-bth {
 	display: flex;
 	gap: 20px;
+	justify-content: right;
+	padding-right: 20px;
 }
 
 .bth-icon {
@@ -229,7 +235,7 @@
 
 
 .select {
-	width: 20px;
+	width: 25px;
 	background-color: transparent;
 	border: none;
 	-moz-appearance: none;
@@ -263,7 +269,7 @@
 
 
 @media screen and (max-width: 730px) {
-	.sms__form-top {
+	.sms__header {
 		grid-template-columns: repeat(2, minmax(100px, 200px));
 		grid-template-rows: repeat(2, 40px);
 	}
@@ -279,7 +285,7 @@
 		padding-top: 10px;
 	}
 
-	.sms__form-top {
+	.sms__header {
 		gap: 10px;
 		padding: 10px 15px;
 	}
