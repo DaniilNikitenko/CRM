@@ -1,8 +1,13 @@
+'use strict';
 
-<<<<<<< HEAD
-=======
+const titleModal = document.querySelector('.popup__title');
+const closeModal = document.querySelector('.popup__close');
+const modalId = document.querySelector('.popup__id');
 
-console.log(nameProduct)
-console.log(priceProduct * countProduct)
->>>>>>> 915e038a2935125a37e3038be724874a8dda1cc4
+const formModal = document.querySelector('.form');
+const formCheckbox = document.querySelector('.form__checkbox');
+const inputCheckbox = document.getElementById('discont');
+
+const totalSum = document.getElementById('total-popup');
+
 
