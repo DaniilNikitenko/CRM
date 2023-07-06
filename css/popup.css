@@ -9,7 +9,10 @@
 	padding-bottom: 0;
 	overflow-y: auto;
 	display: none;
+}
 
+.show {
+	display: block;
 }
 
 .popup__body {
