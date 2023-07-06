@@ -5,9 +5,9 @@ const closeModal = document.querySelector('.popup__close');
 const modalId = document.querySelector('.popup__id');
 
 const formModal = document.querySelector('.form');
-const formCheckbox = document.querySelector('.form__checkbox');
-const inputCheckbox = document.getElementById('discont');
+const discontcCheckbox = document.querySelector('.form__checkbox');
+const discontInput = document.querySelector('#discont');
 
-const totalSum = document.getElementById('total-popup');
+const totalSum = document.querySelector('#total-popup');
 
 
