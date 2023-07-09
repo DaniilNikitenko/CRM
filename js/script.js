@@ -1,7 +1,9 @@
 'use strict';
 
-// const titleModal = document.querySelector('.popup__title');
-// const closeModal = document.querySelector('.popup__close');
+const smsTitle = document.querySelector('.sms__button');
+const titleModal = document.querySelector('.popup');
+const modalContent = document.querySelector('.popup__content');
+const closeModal = document.querySelector('.popup__close');
 // const modalId = document.querySelector('.popup__id');
 
 // const formModal = document.querySelector('.form');
@@ -80,6 +82,21 @@ const goods = [
     images: icons,
   },
 ];
+smsTitle.addEventListener('click', () => {
+  titleModal.classList.add('_hidden');
+});
+
+modalContent.addEventListener('click', (event) => {
+  event.stopPropagation();
+});
+
+const handleClick = () => {
+  titleModal.classList.remove('_hidden');
+};
+
+titleModal.addEventListener('click', handleClick);
+closeModal.addEventListener('click', handleClick);
+
 
 const createRow = ({id, title, category, units, count, price, images}) => {
   const row = document.createElement('tr');

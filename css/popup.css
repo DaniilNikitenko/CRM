@@ -11,6 +11,10 @@
 	display: none;
 }
 
+._hidden{
+	display: block;
+}
+
 
 .popup__body {
 	min-height: 100%;
