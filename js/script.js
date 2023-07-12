@@ -1,9 +1,12 @@
 'use strict';
 
 const smsTitle = document.querySelector('.sms__button');
-const titleModal = document.querySelector('.popup');
+const popup = document.querySelector('.popup');
 const modalContent = document.querySelector('.popup__content');
 const closeModal = document.querySelector('.popup__close');
+const btnDel = document.querySelector('.delete');
+const list = document.querySelector('tbody');
+const tbody = document.querySelector('.sms__table tbody');
 // const modalId = document.querySelector('.popup__id');
 
 // const formModal = document.querySelector('.form');
@@ -82,21 +85,6 @@ const goods = [
     images: icons,
   },
 ];
-smsTitle.addEventListener('click', () => {
-  titleModal.classList.add('_hidden');
-});
-
-modalContent.addEventListener('click', (event) => {
-  event.stopPropagation();
-});
-
-const handleClick = () => {
-  titleModal.classList.remove('_hidden');
-};
-
-titleModal.addEventListener('click', handleClick);
-closeModal.addEventListener('click', handleClick);
-
 
 const createRow = ({id, title, category, units, count, price, images}) => {
   const row = document.createElement('tr');
@@ -129,13 +117,39 @@ const createRow = ({id, title, category, units, count, price, images}) => {
     cell.innerHTML = value;
     row.appendChild(cell);
   });
-
-  const tbody = document.querySelector('.sms__table tbody');
   tbody.appendChild(row);
 };
 
 const renderGoods = (items) => {
   items.forEach(createRow);
 };
+
+smsTitle.addEventListener('click', () => {
+  popup.classList.add('_hidden');
+});
+
+popup.addEventListener('click', (e) => {
+  const target = e.target;
+  if (
+    target.classList.contains('popup__body') ||
+    target.classList.contains('popup__close')
+  ) {
+    popup.classList.remove('_hidden');
+  }
+});
+
+list.addEventListener('click', (e) => {
+  if (e.target.closest('.delete')) {
+    const row = e.target.closest('.table__line');
+    const id = row.querySelector('.table__cell-id').textContent;
+    const itemIndex = goods.findIndex((item) => item.id === parseInt(id));
+
+    if (itemIndex !== -1) {
+      goods.splice(itemIndex, 1);
+      row.remove();
+      console.table(goods);
+    }
+  }
+});
 
 renderGoods(goods);
