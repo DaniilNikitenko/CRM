@@ -97,7 +97,6 @@ const handleClick = () => {
 titleModal.addEventListener('click', handleClick);
 closeModal.addEventListener('click', handleClick);
 
-
 const createRow = ({id, title, category, units, count, price, images}) => {
   const row = document.createElement('tr');
   row.className = 'table__line';
